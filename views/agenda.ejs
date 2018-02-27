@@ -1,0 +1,80 @@
+<% include ./partials/header %>
+<% include ./partials/navbar %>
+
+<div class="container">
+  <hr>
+  <h1>Select desired rendez-vous</h1>
+  <h4>Available dates:</h4>
+  <br>
+  <form class="form-horizontal" role="form" action="/valider" data-toggle="validator">
+
+
+    <table class="table table-responsive">
+         <thead>
+             <tr>
+
+                 <th>Date</th>
+                 <th>Hour</th>
+             </tr>
+         </thead>
+         <tbody>
+         <form>
+
+             <tr>
+                 <td>
+                     <div class="radio">
+                         <label><input type="radio" id='regular' name="optradio" required>Vendredi 18 Janvier 2017</label>
+                     </div>
+                 </td>
+                 <td>
+                 <div class="radiotext">
+                     <label for='regular'>16:50</label>
+                 </div>
+                 </td>
+             </tr>
+             <tr>
+                 <td>
+                     <div class="radio">
+                         <label><input type="radio" id='express' name="optradio" required>Mardi 16 Fevrier 2018</label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radiotext">
+                         <label for='express'>08:30</label>
+                     </div>
+                 </td>
+             </tr>
+             <tr>
+                 <td>
+                     <div class="radio">
+                         <label><input type="radio" id='express' name="optradio" required>Mercredi 28 Mars 2016</label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radiotext">
+                         <label for='express'>08:30</label>
+                     </div>
+                 </td>
+             </tr>
+             <tr>
+                 <td>
+                     <div class="radio">
+                         <label><input type="radio" id='express' name="optradio">Mardi 16 Fevrier 2018</label>
+                    </div>
+                 </td>
+                 <td>
+                     <div class="radiotext">
+                         <label for='express'>08:30</label>
+                     </div>
+                 </td>
+             </tr>
+             </form>
+             </tbody>
+    </table>
+
+<button type="submit"  class="btn btn-primary">Confirmer >></button>
+
+  </form>
+</div>
+
+<% include ./partials/footer %>

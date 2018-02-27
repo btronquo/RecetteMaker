@@ -1,0 +1,72 @@
+<% include ./partials/header %>
+<% include ./partials/navbar %>
+
+<div class="container">
+  <div class="alert alert-info" role="alert">Already member ? Click here to <a href="/user"><b>Log-in</b></a></div>
+            <form class="form-horizontal" role="form" action="/register" method="post">
+                <h2>Registration Form</h2>
+                <div class="form-group">
+                    <label for="userName" class="col-sm-3 control-label">Username</label>
+                    <div class="col-sm-9">
+                        <input type="text"  name="username" placeholder="Username" class="form-control" autofocus required>
+                        <span class="help-block">Username</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3 control-label">First Name</label>
+                    <div class="col-sm-9">
+                        <input type="text"  name="firstname" placeholder="First Name" class="form-control" autofocus required>
+                        <span class="help-block">First Name</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastName" class="col-sm-3 control-label">Last Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="lastname" placeholder="Last Name" class="form-control" autofocus required>
+                        <span class="help-block">First Name</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Email</label>
+                    <div class="col-sm-9">
+                        <input type="email" name="email" placeholder="Email" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">Password</label>
+                    <div class="col-sm-9">
+                        <input type="password" name="password" placeholder="Password" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="birthDate" class="col-sm-3 control-label">Date of Birth</label>
+                    <div class="col-sm-9">
+                        <input type="date" name="birthdate" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" required>I have read and accept <a href="/privacy" target="_blank">privacy policy</a>
+                            </label>
+                        </div>
+                    </div>
+                </div> <!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                  <div class="g-recaptcha" data-sitekey="6Lf1QCYUAAAAACRYZAEsn2wS1z3vJ3c3wbxI8P7O"></div>
+                </div>
+                </div>
+
+            </form> <!-- /form -->
+        </div> <!-- ./container -->
+
+<% include ./partials/footer %>

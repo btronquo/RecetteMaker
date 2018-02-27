@@ -1,0 +1,18 @@
+<% include ./partials/header %>
+<% include ./partials/navbar %>
+
+<div class="container">
+  <h3>Bonjour <%= currentUser.firstname %> <%= currentUser.lastname %></h3>
+  <p>Id utilisateur: <%= currentUser.id %></p>
+  <div class="center">
+
+    <hr>
+    <h4 class="text-success">Voici la liste des recettes</h4>
+    <a href="#"><span class="label label-success">New Rendez-vous</span></a>
+    <hr>
+
+    <button>Ajouter un</button>
+
+  </div>
+</div>
+<% include ./partials/footer %>
