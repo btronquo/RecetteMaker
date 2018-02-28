@@ -1,0 +1,11 @@
+<% include ./partials/header %>
+<% include ./partials/navbar %>
+
+<div class = "container">
+	<form action="/recette" method="POST">
+	  <input type="text" placeholder="Nom de la recette" name="name">
+	  <button type="submit">Enregistrer</button>
+	</form>
+</div>
+
+<% include ./partials/footer %>

@@ -9,7 +9,7 @@ var mongoose = require("mongoose");
 
 var RecetteSchema = new mongoose.Schema({
     name: String,
-    datecre: Date.now,
+    datecre: {type: Date, default: Date.now},
     comments: String,
     status: Boolean,
 });

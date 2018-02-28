@@ -1,15 +1,15 @@
 /**
- * 
+ *
  *  @author: Boris Tronquoy
  *  @description: Modèle pour les catégories des recettes
- *  
+ *
 */
 
 var mongoose = require("mongoose");
 
 var CategorySchema = new mongoose.Schema({
     name: String,
-    datecre: String,
+    datecre: {type: Date, default: Date.now},
     status: String,
     createdby: String,
     birthdate: String,

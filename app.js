@@ -5,7 +5,7 @@ var express               = require("express"),
     bodyParser            = require("body-parser"),
     User                  = require("./models/user"),
     Recette               = require("./models/recette"),
-    Category                  = require("./models/category"),
+    Category              = require("./models/category"),
     LocalStrategy         = require("passport-local"),
     passportLocalMongoose = require("passport-local-mongoose"),
     nodemailer            = require("nodemailer");
@@ -108,7 +108,7 @@ mailTransport.sendMail(mailOptions, function(error, info){
   });
 });
 
-// 
+//
 //---------- Routes for recette ---------- //
 //
 //
@@ -116,13 +116,24 @@ mailTransport.sendMail(mailOptions, function(error, info){
 // ---- recette
 app.get("/recette", isLoggedIn, function(req, res){
   res.render("recette", { username: req.user.username });
+  console.log("olaaa");
+
 });
 app.get("/recette/new", isLoggedIn, function(req, res){
   res.render("recette", { username: req.user.username });
 });
+
 app.post("/recette", isLoggedIn, function(req, res){
   res.render("recette", { username: req.user.username });
+
+  db.collection('Recette').save(req.body, (err, result) => {
+    if (err) return console.log(err)
+
+    console.log('saved to database!')
+    res.redirect('/')
+  })
 });
+
 app.get("/recette/:id", isLoggedIn, function(req, res){
   res.render("recette", { username: req.user.username });
 });
